@@ -23,6 +23,7 @@
 				var oJSON = JSON.parse(sResponseBody);
 				var sReais = oJSON.rates.BRL;
 				console.log(sReais);
+				document.querySelector("#valor_destino").value = sReais;
 			}
 			
 			function chamaAPI(){
@@ -49,7 +50,7 @@
 			<label>
 				Valor de Destino
 			</label>
-			<input type="number" disabled><br />
+			<input id="valor_destino" type="number" disabled><br />
 			<button type="button" onclick="voltar()">
 				Voltar
 			</button>
